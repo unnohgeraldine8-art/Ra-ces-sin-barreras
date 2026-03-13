@@ -50,6 +50,12 @@
     </footer>
 
     <script>
+        // Función para el menú hamburguesa
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+
+        // Lógica del Slider
         const slider = document.getElementById('mainSlider');
         const images = ['img/Slider1.png', 'img/Slider2.png', 'img/Slider3.png'];
         let current = 0;
@@ -58,12 +64,5 @@
             slider.style.backgroundImage = `url('${images[current]}')`;
         }, 4000);
     </script>
-    <script>
-        function toggleMenu() {
-            // Esto busca la lista y le pone/quita la clase 'active'
-            document.getElementById("navLinks").classList.toggle("active");
-        }
-    </script>
-</body>
 </body>
 </html>

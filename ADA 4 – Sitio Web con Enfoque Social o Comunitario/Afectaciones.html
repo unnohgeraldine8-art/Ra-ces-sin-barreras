@@ -6,7 +6,6 @@
     <link rel="icon" type="img" href="img/favicon1.jpg">
     <link rel="stylesheet" href="css/estilo.css">
     <style>
-        /* Galería de videos cuadrados */
         .video-gallery {
             display: flex;
             justify-content: center;
@@ -16,7 +15,6 @@
             max-width: 1200px;
             flex-wrap: wrap;
         }
-
         .video-container {
             position: relative;
             width: 300px;
@@ -29,16 +27,13 @@
             transition: all 0.5s ease-in-out;
             z-index: 1;
         }
-
         video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Cuadrado al inicio */
+            object-fit: cover;
             cursor: pointer;
             display: block;
         }
-
-        /* CAPA OSCURA SUTIL */
         .overlay {
             display: none;
             position: fixed;
@@ -47,8 +42,6 @@
             background: rgba(0, 15, 10, 0.75);
             z-index: 9998;
         }
-
-        /* ESTADO ACTIVO GENERAL */
         .video-active {
             position: fixed;
             top: 50%;
@@ -60,25 +53,19 @@
             border-radius: 10px;
             height: auto;
         }
-
-        /* ZOOM PARA VIDEO 1 (Horizontal - Más grande) */
         .zoom-h {
             width: 600px;
             transform: translate(-50%, -50%) scale(1.2);
         }
-
-        /* ZOOM PARA VIDEO 2 (Vertical - Menos zoom para que se aprecie bien) */
         .zoom-v {
-            width: 350px; /* Más estrecho para formato vertical */
-            transform: translate(-50%, -50%) scale(1.1); /* Zoom mínimo */
+            width: 350px;
+            transform: translate(-50%, -50%) scale(1.1);
         }
-
         .video-active video {
             object-fit: contain; 
             background-color: #000;
             border-radius: 10px;
         }
-
         .reflexive-title {
             text-align: center;
             color: #ffd700;
@@ -96,11 +83,11 @@
     <header class="navbar">
         <button class="hamburguesa" onclick="toggleMenu()">☰</button>
         <ul class="nav-links" id="navLinks">
-            <a href="index.html">Inicio</a>
-            <a href="pueblosindigenas.html">Sobre ello</a>
-            <a href="afectaciones.html">Afectaciones</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pueblosindigenas.html">Sobre ello</a></li>
+            <li><a href="afectaciones.html">Afectaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
     </header>
 
     <section class="banner" style="background-image: url('img/Slider3.png');">
@@ -126,19 +113,22 @@
 
         <div style="max-width: 850px; margin: 30px auto; background: rgba(0, 37, 26, 0.8); padding: 25px; border-radius: 12px; border-left: 5px solid #D4AF37;">
             <p style="color: #fdf5e6; line-height: 1.8; font-size: 17px; text-align: justify; margin: 0;">
-               He seleccionado estos recursos visuales para mostrar y explicar que la discriminación no son solo palabras, sino un sistema que bloquea el desarrollo de comunidades enteras. Estos videos exponen cómo el prejuicio se convierte en barreras reales: desde ser juzgados al buscar atención médica hasta enfrentar un sistema educativo que ignora nuestra lengua y cultura. Mi intención es que estos testimonios sirvan para entender que la desigualdad no es un accidente, sino el resultado de protocolos que nos excluyen cotidianamente. Te invito a observar estas realidades para cuestionar los privilegios y la falta de empatía que perpetúan esta brecha en nuestro país.
+               He seleccionado estos recursos visuales para mostrar y explicar que la discriminación no son solo palabras...
             </p>
         </div>
     </main>
 
     <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+
         const v1 = document.getElementById('v1');
         const v2 = document.getElementById('v2');
         const c1 = document.getElementById('c1');
         const c2 = document.getElementById('c2');
         const overlay = document.getElementById('videoOverlay');
 
-        // Lógica para Video 1 (Horizontal)
         v1.onplay = function() {
             c1.classList.add('video-active', 'zoom-h');
             overlay.style.display = 'block';
@@ -148,7 +138,6 @@
             overlay.style.display = 'none';
         };
 
-        // Lógica para Video 2 (Vertical - Menos Zoom)
         v2.onplay = function() {
             c2.classList.add('video-active', 'zoom-v');
             overlay.style.display = 'block';
@@ -168,11 +157,5 @@
         <p><strong>ADA 4 COBAY - Plantel Santa Rosa</strong></p>
         <p>2026 - Geraldine Beatriz Un Noh</p>
     </footer>
- <script>
-        function toggleMenu() {
-            // Esto busca la lista y le pone/quita la clase 'active'
-            document.getElementById("navLinks").classList.toggle("active");
-        }
-    </script>
 </body>
 </html>
