@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Inicio | Raíces Sin Barreras</title>
+    <link rel="icon" type="image/jpg" href="img/favicon1.jpg">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body onload="alert('¡Bienvenida a mi página!')">
+
+    <header class="navbar">
+        <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pueblosindigenas.html">Sobre ello</a></li>
+            <li><a href="afectaciones.html">Afectaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </header>
+
+    <section class="banner" id="mainSlider" style="background-image: url('img/Slider1.png'); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 87vh;">
+        <h1 class="brand-title" style="font-size: 35px; margin-bottom: 5px; text-transform: none; color: white;">Bienvenidos a</h1>
+        <h2 class="brand-title" style="font-size: 50px; margin-top: 0; text-decoration: underline; color: var(--oro-brillante); font-weight: bold;">Raíces Sin Barreras</h2>
+    </section>
+
+    <main class="content-wrapper">
+        <section class="welcome-section" style="padding: 50px 20px; text-align: center;">
+            <div class="text-content" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="color: var(--oro-brillante); margin-bottom: 12px; font-family: 'Playfair Display', serif;">La discriminación hacia las comunidades indígenas</h2>
+                <p style="text-align: justify; line-height: 1.8; color: white;">
+                    Mi propósito con este sitio es invitarte a reconocer y desmantelar las barreras invisibles que impiden a las comunidades originarias ejercer sus derechos con plenitud. He decidido incluir la imagen de Chichén Itzá no como un adorno, sino para cuestionar por qué a menudo admiramos monumentos del pasado mientras discriminamos a los herederos vivos de esa cultura; para mí, esa pirámide representa una herencia que merece respeto hoy y no solo admiración histórica. Acompaño este mensaje con imágenes de tejidos artesanales y rostros reales para denunciar que no podemos valorar el objeto o el "folclor" e ignorar al mismo tiempo la exclusión que enfrentan quienes los crean. Los videos reflexivos que seleccioné personalmente sirven para confrontar esos prejuicios y entender que la identidad indígena no debe ser un muro, sino el puente hacia una sociedad donde todos tengamos el mismo valor.
+                </p>
+            </div>
+            <img src="img/Slider1.png" class="main-illustration" style="width: 100%; max-width: 400px; margin-top: 20px; border-radius: 8px; border: 1px solid var(--oro);">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><strong>ADA 4 COBAY - Plantel Santa Rosa</strong></p>
+        <p>2026 - Geraldine Beatriz Un Noh | Mérida, Yucatán, México</p>
+        <div class="footer-social-box">
+            <span>Facebook: COBAY Santa Rosa</span> | 
+            <span>TikTok: @plantel.cobay.san</span>
+        </div>
+        
+        <div style="margin: 20px 0; text-align: center;">
+            <p style="color: var(--oro); font-size: 14px;">Visitantes en el sitio:</p>
+            <img src="https://counter1.optistats.ovh/private/contadorvisitasgratis.php?c=x9r6zk9x1xnx4n6n9h8r9k8p9k9r9xnx" title="contador de visitas" alt="contador de visitas" style="border: 1px solid var(--oro); border-radius: 4px;">
+        </div>
+    </footer>
+
+    <script>
+        const slider = document.getElementById('mainSlider');
+        const images = ['img/Slider1.png', 'img/Slider2.png', 'img/Slider3.png'];
+        let current = 0;
+        setInterval(() => {
+            current = (current + 1) % images.length;
+            slider.style.backgroundImage = `url('${images[current]}')`;
+        }, 4000);
+    </script>
+    <script>
+        function toggleMenu() {
+            // Esto busca la lista y le pone/quita la clase 'active'
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+    </script>
+</body>
+</body>
+</html>

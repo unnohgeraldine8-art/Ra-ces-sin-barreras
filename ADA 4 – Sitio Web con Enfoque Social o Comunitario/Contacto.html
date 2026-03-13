@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Contacto | Voces Raíces</title>
+    <link rel="icon" type="img" href="img/favicon1.jpg">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pueblosindigenas.html">Sobre ello</a></li>
+            <li><a href="afectaciones.html">Afectaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </header>
+
+    <main class="content-wrapper" style="margin-top: 110px; text-align: center;">
+        <h2 style="color: var(--oro-brillante); font-size: 36px; font-family: 'Playfair Display', serif;">CENTRO DE ATENCIÓN</h2>
+        <p style="font-style: italic; color: var(--oro); margin-bottom: 25px;">Tu voz también cuenta para generar un cambio positivo</p>
+        
+        <div style="margin-bottom: 30px; text-align: justify; font-size: 15px;">
+            <p>¿Deseas colaborar o profundizar en la temática? Si tienes dudas sobre el proyecto, requieres compartir información relevante o dejar un comentario sobre la discriminación estructural en México, utiliza el siguiente formulario o nuestras redes oficiales.</p>
+        </div>
+
+        <form action="https://formsubmit.co/unnohgeraldine8@gmail.com" method="POST" style="max-width: 550px; margin: 0 auto; text-align: left;">
+            
+            <input type="text" name="Nombre" placeholder="Nombre Completo" style="width: 100%; padding: 12px; margin-bottom: 12px; background: rgba(0,0,0,0.5); border: 1px solid var(--oro); color: white; border-radius: 4px;" required>
+            
+            <textarea name="Mensaje" placeholder="Mensaje o Comentario" style="width: 100%; padding: 12px; background: rgba(0,0,0,0.5); border: 1px solid var(--oro); color: white; height: 90px; border-radius: 4px;" required></textarea>
+            
+            <input type="hidden" name="_captcha" value="false">
+            
+            <button type="submit" class="btn-social" style="width: 100%; border: none; cursor: pointer; margin: 15px 0;">ENVIAR INFORMACIÓN</button>
+        </form>
+
+        <div style="margin-top: 30px;">
+            <a href="https://facebook.com/COBAYSantaRosa" target="_blank" class="btn-social">FACEBOOK</a>
+            <a href="https://tiktok.com/@plantel.cobay.san" target="_blank" class="btn-social">TIKTOK</a>
+        </div>
+
+        <div style="margin-top: 40px; border: 2px solid var(--oro); border-radius: 8px; overflow: hidden;"><p> Nuestra ubicación</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.56127117381!2d-89.62681532474534!3d20.966085980665554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56717a65825257%3A0xc3910c28340d04b6!2sCOBAY%20Plantel%20Santa%20Rosa!5e0!3m2!1ses-419!2smx!4v1715634567890!5m2!1ses-419!2smx" width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Geraldine Beatriz Un Noh - 2026</p>
+    </footer>
+ <script>
+        function toggleMenu() {
+            // Esto busca la lista y le pone/quita la clase 'active'
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

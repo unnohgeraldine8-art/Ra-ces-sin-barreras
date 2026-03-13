@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --esmeralda-profundo: #00251a;
+    --esmeralda-medio: #003d33;
+    --esmeralda-claro: #004d40;
+    --oro: #D4AF37;
+    --oro-brillante: #ffd700;
+    --texto-crema: #fdf5e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--esmeralda-profundo);
+    background-image: radial-gradient(circle at center, var(--esmeralda-medio) 0%, var(--esmeralda-profundo) 100%);
+    background-attachment: fixed;
+    color: var(--texto-crema);
+    font-family: 'Poppins', sans-serif;
+    /* Chispitas sutiles */
+    background-image: radial-gradient(rgba(255, 215, 0, 0.08) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* --- NAVBAR FIJA --- */
+.navbar {
+    background: rgba(0, 37, 26, 0.98);
+    border-bottom: 2px solid var(--oro);
+    padding: 12px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--oro);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(212, 175, 55, 0.2);
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* --- BANNER --- */
+.banner {
+    height: 480px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+    border-bottom: 3px solid var(--oro);
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.brand-title {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    color: var(--oro-brillante);
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(255, 215, 0, 0.4);
+    font-weight: 900;
+}
+
+/* --- CONTENEDORES (FONDOS VERDES) --- */
+.content-wrapper {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 35px;
+    background: rgba(0, 61, 51, 0.6); /* Verde traslúcido para que se vea el fondo */
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.main-illustration {
+    width: 230px;
+    border: 2px solid var(--oro);
+    border-radius: 6px;
+}
+
+/* --- GALERÍA 2 COLUMNAS --- */
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 320px;
+    border: 2px solid var(--oro);
+    background: #000;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery-text {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 37, 26, 0.95);
+    color: var(--oro-brillante);
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.gallery-item:hover .gallery-text { opacity: 1; }
+
+/* --- BOTONES --- */
+.btn-social {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--oro), var(--oro-brillante));
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 8px;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.btn-social:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* --- FOOTER COMPACTO (BAJITO) --- */
+.footer {
+    padding: 25px 15px; /* Altura reducida */
+    text-align: center;
+    border-top: 2px solid var(--oro);
+    background: rgba(0, 0, 0, 0.4); /* Fondo oscuro pero integrado */
+    margin-top: 30px;
+}
+
+.footer p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.footer-social-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.line-div {
+    width: 1px;
+    height: 18px;
+    background: var(--oro);
+}
+
+/* --- LO QUE ME PEDISTE AGREGAR AL FINAL --- */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.content-wrapper {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .brand-title {
+        font-size: 35px !important;
+    }
+
+    .content-wrapper {
+        margin-top: 80px !important;
+        padding: 20px 15px;
+    }
+
+    .footer-social-box {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .line-div {
+        display: none;
+    }
+}
+/* --- ESTILO HAMBURGUESA --- */
+.hamburguesa {
+    display: none; /* Se esconde en PC */
+    background: none;
+    border: none;
+    color: #D4AF37; /* Color Oro */
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between; /* Alinea el botón y el menú */
+        padding: 10px 20px;
+    }
+
+    .hamburguesa { 
+        display: block; /* Aparece en celular */
+    }
+
+    .nav-links {
+        display: none; /* AQUÍ SE ESCONDEN LAS PESTAÑAS */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #00251a; /* Tu verde oscuro */
+        padding: 20px;
+        border-bottom: 2px solid #D4AF37;
+    }
+
+    /* Clase que se activa con el clic */
+    .nav-links.active {
+        display: flex; 
+    }
+}
